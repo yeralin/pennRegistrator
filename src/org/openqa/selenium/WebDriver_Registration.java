@@ -38,16 +38,16 @@ public class WebDriver_Registration {
             driver.navigate().to("https://elionvw.ais.psu.edu/cgi-bin/elion-student.exe/submit/goRegistration");
             switch (semesterNum) {
                 case 1:
-                    radioButtonFall = driver.findElement(By.id("radio1@1"));
+                    radioButtonFall = driver.findElement(By.id("radio1 @ 1"));
                     break;
                 case 2:
-                    radioButtonFall = driver.findElement(By.id("radio1@2"));
+                    radioButtonFall = driver.findElement(By.id("radio1 @ 2"));
                     break;
                 case 3:
-                    radioButtonFall = driver.findElement(By.id("radio1@3"));
+                    radioButtonFall = driver.findElement(By.id("radio1 @ 3"));
                     break;
                 case 4:
-                    radioButtonFall = driver.findElement(By.id("radio1@4"));
+                    radioButtonFall = driver.findElement(By.id("radio1 @ 4"));
                     break;
             }
             radioButtonFall.click();
