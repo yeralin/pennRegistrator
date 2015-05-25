@@ -149,7 +149,7 @@ public class JavaMailReceiving {
                         }
 
                         if (message.getSubject().equals("Watch List Notice")) {
-                            System.out.println("Watch List notice is found");
+                             System.out.println("Watch List notice is found");
                             GetBodyMessage bodyMessageGetter = new GetBodyMessage();
                             if (message.getContent() instanceof String) {
                                 text = (String) message.getContent();

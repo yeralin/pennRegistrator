@@ -12,15 +12,15 @@ public class WebDriver_Registration {
 
             driver.get("https://webaccess.psu.edu/");
 
-            WebElement login;
-            WebElement password;
-            WebElement submitButton;
-            WebElement radioButtonSpring;
-            WebElement radioButtonFall = null;
-            WebElement radioButtonSummer;
-            WebElement courseNumber;
-            WebElement error;
-            WebElement findLink;
+            WebElement login = null;
+            WebElement password = null;
+            WebElement submitButton = null;
+            WebElement radioButtonSpring = null;
+            WebElement radioButtonSemester = null;
+            WebElement radioButtonSummer = null;
+            WebElement courseNumber = null;
+            WebElement error = null;
+            WebElement findLink = null;
             Boolean check = false;
 
             login = driver.findElement(By.id("login"));
@@ -38,19 +38,19 @@ public class WebDriver_Registration {
             driver.navigate().to("https://elionvw.ais.psu.edu/cgi-bin/elion-student.exe/submit/goRegistration");
             switch (semesterNum) {
                 case 1:
-                    radioButtonFall = driver.findElement(By.id("radio1@1"));
+                    radioButtonSemester = driver.findElement(By.id("radio1 @ 1"));
                     break;
                 case 2:
-                    radioButtonFall = driver.findElement(By.id("radio1@2"));
+                    radioButtonSemester = driver.findElement(By.id("radio1 @ 2"));
                     break;
                 case 3:
-                    radioButtonFall = driver.findElement(By.id("radio1@3"));
+                    radioButtonSemester = driver.findElement(By.id("radio1 @ 3"));
                     break;
                 case 4:
-                    radioButtonFall = driver.findElement(By.id("radio1@4"));
+                    radioButtonSemester = driver.findElement(By.id("radio1 @ 4"));
                     break;
             }
-            radioButtonFall.click();
+            radioButtonSemester.click();
             submitButton = driver.findElement(By.xpath("/html/body/form/table/tbody/tr[2]/td/table/tbody/tr[3]/td/input"));
             submitButton.click();
 
@@ -68,8 +68,8 @@ public class WebDriver_Registration {
             submitButton.click();
             if (drop) {
                 try {
-                    radioButtonFall = driver.findElement(By.id("radioN"));
-                    radioButtonFall.click();
+                    radioButtonSemester = driver.findElement(By.id("radioN"));
+                    radioButtonSemester.click();
                     submitButton = driver.findElement(By.xpath("/html/body/form/table/tbody/tr[2]/td/table/tbody/tr[6]/td/table/tbody/tr[2]/td/table/tbody/tr[3]/td/input"));
                     submitButton.click();
                 } catch (Exception e) {
